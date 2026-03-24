@@ -22,7 +22,7 @@ gen:
 	mkdir -p $(TMP)/diagrams
 
 $(TMP)/%.pdf: %.svg
-	inkscape $< --without-gui --export-area-drawing --export-dpi=600 --export-pdf $@
+	inkscape $< --export-area-drawing --export-dpi=600 --export-filename $@
 
 clean:
 	rm -rf $(TMP)
